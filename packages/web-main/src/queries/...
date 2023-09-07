@@ -1,0 +1,11 @@
+import { hasNextPage } from './util';
+import { MetadataOutput } from '@takaro/apiclient';
+
+async function fetchData(pageInfo: MetadataOutput, pageIndex: number) {
+  console.log(`fetchData called with pageInfo: ${JSON.stringify(pageInfo)}, pageIndex: ${pageIndex}`);
+
+  const hasNext = hasNextPage(pageInfo, pageIndex);
+  console.log(`hasNextPage returned with value: ${hasNext}`);
+
+  // Rest of the fetchData function implementation...
+}
